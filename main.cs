@@ -1,67 +1,47 @@
 using System;
+using System.Collections.Generic;
 
-
-//store data in general
+// Store data in general
 class Store
 {
-    //attributes
-    private string[] data = new string[1000];
-    private int position = 0;
-    
-    //constructor
+    // Attributes
+    public List<string> data = new List<string>();
+
+    // Constructor
     public Store() { }
 
-    //add value
+    // Add value
     public void Add(string item)
     {
-        data[position] = item;
-        position++;
+        data.Add(item);
     }
-    
-    //remove value with void
-    public void Remove(int id){
-        data[id]=null;
+
+    // Remove value
+    public void Remove(string item)
+    {
+        data.Remove(item);
     }
-    
-    //print value
+
+    // Print list
     public void Display()
     {
-        //local attributes
-        string[] dataStruct = new string[position + 2];
-        int positionDataStruct = 0;
-
-        
-        dataStruct[positionDataStruct] = "{";
-        
-        //add data to vector
-        for (int i = 0; i < position; i++)
-        {
-            dataStruct[positionDataStruct + 1] = $"  {data[i]}  ,";
-            positionDataStruct++;
-        }
-
-        dataStruct[positionDataStruct + 1] = "}";
-
-        //print vector
-        Console.WriteLine(string.Join(" ", dataStruct));
+        Console.WriteLine("{" + string.Join(", ", data) + "}");
     }
 }
 
-
-
-//main class
+// Main class
 class Program
 {
     public static void Main(string[] args)
     {
-        // simple test data
+        // Simple test data
         Store store = new Store();
         store.Add("gfhdfgh");
         store.Add("1");
         store.Add("asdfa");
         store.Add("3");
         store.Add("yuituit");
-        //store.Remove(5);
+        //store.Remove("3"); 
         store.Display();
     }
 }
