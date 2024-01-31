@@ -1,0 +1,15 @@
+D:\Projetos de Programação\Estrutura_de_Armazenamento_CSharp\application\application\bin\Debug\net8.0\application.exe
+D:\Projetos de Programação\Estrutura_de_Armazenamento_CSharp\application\application\bin\Debug\net8.0\application.deps.json
+D:\Projetos de Programação\Estrutura_de_Armazenamento_CSharp\application\application\bin\Debug\net8.0\application.runtimeconfig.json
+D:\Projetos de Programação\Estrutura_de_Armazenamento_CSharp\application\application\bin\Debug\net8.0\application.dll
+D:\Projetos de Programação\Estrutura_de_Armazenamento_CSharp\application\application\bin\Debug\net8.0\application.pdb
+D:\Projetos de Programação\Estrutura_de_Armazenamento_CSharp\application\application\obj\Debug\net8.0\application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projetos de Programação\Estrutura_de_Armazenamento_CSharp\application\application\obj\Debug\net8.0\application.AssemblyInfoInputs.cache
+D:\Projetos de Programação\Estrutura_de_Armazenamento_CSharp\application\application\obj\Debug\net8.0\application.AssemblyInfo.cs
+D:\Projetos de Programação\Estrutura_de_Armazenamento_CSharp\application\application\obj\Debug\net8.0\application.csproj.CoreCompileInputs.cache
+D:\Projetos de Programação\Estrutura_de_Armazenamento_CSharp\application\application\obj\Debug\net8.0\application.sourcelink.json
+D:\Projetos de Programação\Estrutura_de_Armazenamento_CSharp\application\application\obj\Debug\net8.0\application.dll
+D:\Projetos de Programação\Estrutura_de_Armazenamento_CSharp\application\application\obj\Debug\net8.0\refint\application.dll
+D:\Projetos de Programação\Estrutura_de_Armazenamento_CSharp\application\application\obj\Debug\net8.0\application.pdb
+D:\Projetos de Programação\Estrutura_de_Armazenamento_CSharp\application\application\obj\Debug\net8.0\application.genruntimeconfig.cache
+D:\Projetos de Programação\Estrutura_de_Armazenamento_CSharp\application\application\obj\Debug\net8.0\ref\application.dll
