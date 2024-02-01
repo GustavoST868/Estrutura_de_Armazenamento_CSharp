@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+
 class Store
 {
-    //atttributes
+    // Attributes
     List<string> datatext = new List<string>();
-    List<double> datadouble = new List<double>();
+    List<double> datanumber = new List<double>();
     List<string> datacompound = new List<string>();
 
     public Store() { }
@@ -33,30 +34,57 @@ class Store
     {
 
     }
-}
 
+    void save(string data)
+    {
+
+    }
+}
 
 class CheckType
 {
     public CheckType() { }
 
-    int checkType()
+    int checkTypeFunction()
     {
         return 0;
     }
 }
 
-
 class Analyze
 {
-    public Analyze() { }
+    // Attributes
+    List<string> datatextcopy = new List<string>();
+    List<double> datanumbercopy = new List<double>();
+    List<string> datacompoundcopy = new List<string>();
+    
+    public Analyze(List<string> datatext, List<string> datacompound, List<double> datanumber)
+    {
+        datatextcopy = datatext;
+        datacompoundcopy = datacompound;
+        datanumbercopy = datanumbercopy;
+    }
 
+    void media()
+    {
+        
+    }
+
+    void standardDeviation()
+    {
+
+    }
+
+    void frequency()
+    {
+
+    }
 }
 
 class Program
 {
-    static void Main() 
+    static void Main()
     {
-      
+        
     }
 }
