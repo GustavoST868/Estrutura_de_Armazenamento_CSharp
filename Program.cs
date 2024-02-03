@@ -176,11 +176,11 @@ class Program
     static void Main()
     {
         // test
-        Store store = new Store();
-        store.insert_filter("1");
-        store.insert_filter("2a");
-        store.insert_filter("a");
-        store.print();
-        store.search("a");
+        //Store store = new Store();
+        //store.insert_filter("1");
+        //store.insert_filter("2a");
+        //store.insert_filter("a");
+        //store.print();
+        //store.search("a");
     }
 }
