@@ -115,6 +115,18 @@ class Store
     {
         
     }
+    
+    public List<string> Getdatatext(){
+        return datatext;
+    }
+    
+    public List<string> Getdatanumber(){
+        return datanumber;
+    }
+    
+    public List<string> Getdatacompound(){
+        return datacompound;
+    }
 }
 
 class CheckType
@@ -146,6 +158,7 @@ class Analyze
     // Attributes
     List<string> datatextcopy = new List<string>();
     List<string> datanumbercopy = new List<string>();
+    List<double> datanumber = new List<double>();
     List<string> datacompoundcopy = new List<string>();
 
     public Analyze(List<string> datatext, List<string> datacompound, List<string> datanumber)
@@ -155,11 +168,30 @@ class Analyze
         datanumbercopy = datanumber;
     }
 
-    void media()
+    public double media() 
     {
-       
-    }
+        foreach (string value in datanumbercopy)
+        {
+            datanumber.Add(double.Parse(value));
+        }
 
+        double sum = 0;
+
+        // empty list
+        if (datanumber.Count == 0)
+        {
+            return 0;
+        }
+
+        foreach (double value in datanumber)
+        {
+            sum += value;
+        }
+
+        // media
+        double media = sum / datanumber.Count;
+        return media;
+    }
     void standardDeviation()
     {
         
@@ -175,12 +207,18 @@ class Program
 {
     static void Main()
     {
-        // test
-        //Store store = new Store();
-        //store.insert_filter("1");
-        //store.insert_filter("2a");
-        //store.insert_filter("a");
-        //store.print();
-        //store.search("a");
+        //testing the Store Class 
+        Store store = new Store();
+        store.insert_filter("1");
+        store.insert_filter("4");
+        store.insert_filter("20");
+        store.insert_filter("2a");
+        store.insert_filter("a");
+        store.print();
+        store.search("a");
+        
+        //testing the Analyze Class 
+        Analyze analyze  = new Analyze(store.Getdatatext(),store.Getdatacompound(),store.Getdatanumber());
+        Console.WriteLine("Media = |"+analyze.media()+"|");
     }
 }
