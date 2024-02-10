@@ -158,7 +158,6 @@ class Analyze
     // Attributes
     List<string> datatextcopy = new List<string>();
     List<string> datanumbercopy = new List<string>();
-    List<double> datanumber = new List<double>();
     List<string> datacompoundcopy = new List<string>();
 
     public Analyze(List<string> datatext, List<string> datacompound, List<string> datanumber)
@@ -169,7 +168,10 @@ class Analyze
     }
 
     public double media() 
+    
     {
+        List<double> datanumber = new List<double>();
+        
         foreach (string value in datanumbercopy)
         {
             datanumber.Add(double.Parse(value));
@@ -192,6 +194,7 @@ class Analyze
         double media = sum / datanumber.Count;
         return media;
     }
+    
     void standardDeviation()
     {
         
