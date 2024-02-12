@@ -203,14 +203,56 @@ class Analyze
         return media;
     }
     
+    void variance()
+    {
+        
+    }
+    
     void standardDeviation()
     {
         
     }
+    
 
-    void frequency()
+    public int  frequency(string datatext)
     {
+       int contador = 0;
        
+       CheckType ct = new CheckType();
+       int type = ct.CheckTypeFunction(datatext);
+
+        switch (type)
+        {
+            case 0:
+                foreach(string data in datanumbercopy){
+                   if(datatext == data){
+                       contador++;
+                   }
+                 }
+                 return contador;
+                break;
+
+            case 1:
+                foreach(string data in datatextcopy){
+                   if(datatext == data){
+                       contador++;
+                   }
+                 }
+                 return contador;
+                break;
+
+            case -1:
+                foreach(string data in datacompoundcopy){
+                   if(datatext == data){
+                       contador++;
+                   }
+                 }
+                 return contador;
+                break;
+                
+            default:
+                return contador;
+        }
     }
 }
 
