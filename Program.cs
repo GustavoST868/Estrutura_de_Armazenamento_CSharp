@@ -2,6 +2,10 @@
 using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
+using System.Linq;
+
+
+
 
 class Store
 {
@@ -203,14 +207,41 @@ class Analyze
         return media;
     }
     
-    void variance()
+    public double variance()
     {
         
+        List<double> datanumber = new List<double>();
+        
+        foreach (string value in datanumbercopy)
+        {
+            datanumber.Add(double.Parse(value));
+        }
+        
+         if (datanumber.Count < 2)
+        {
+            throw new ArgumentException("A variância requer pelo menos dois valores.");
+        }
+
+       
+         double Mean = media();
+
+        
+        double sumSquaredDifferences = 0;
+        
+        foreach (double value in datanumber)
+        {
+            double difference = value - Mean;
+            sumSquaredDifferences += difference * difference;
+        }
+
+        double variance = sumSquaredDifferences / (datanumber.Count - 1);
+
+        return variance;
     }
     
-    void standardDeviation()
+    public double standardDeviation()
     {
-        
+        return Math.Sqrt(variance());
     }
     
 
