@@ -40,7 +40,7 @@ CheckTypeFunction(string data): Função que verifica o tipo de dado (número, t
 Analyze Class
 
 
-Atributos:
+Atributos :
 
 datatextcopy: Lista de strings para armazenar cópia dos dados de texto.
 datanumbercopy: Lista de strings para armazenar cópia dos dados numéricos.
