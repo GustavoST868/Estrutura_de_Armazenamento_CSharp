@@ -1,59 +1,50 @@
 # Estrutura_de_Armazenamento_CSharp
 Estrutura de armazenamento de dados em C#
 
-Store and Analyze Data
-Este é um algoritmo em C# que fornece uma classe chamada Store para armazenar e manipular dados de diferentes tipos, e uma classe chamada Analyze para realizar análises estatísticas sobre esses dados. Abaixo estão as principais funcionalidades e características do algoritmo:
+**Descrição do Algoritmo:**
 
+O algoritmo é uma implementação de um sistema de armazenamento (`Store`) e análise (`Analyze`) de dados. Ele utiliza classes para organizar diferentes funcionalidades, como inserção, remoção, busca, impressão, e salvamento de dados. Vamos descrever a função de cada classe e seus métodos:
 
-Store Class
+### Classe `Store`:
+Esta classe é responsável por armazenar dados e realizar operações básicas sobre esses dados.
 
+#### Atributos:
+- `datatext`: Lista de strings para armazenar dados do tipo texto.
+- `datanumber`: Lista de strings para armazenar dados do tipo número.
+- `datacompound`: Lista de strings para armazenar dados compostos.
 
-Atributos:
+#### Métodos:
 
-datatext: Lista de strings para armazenar dados do tipo texto.
-datanumber: Lista de strings para armazenar dados do tipo número.
-datacompound: Lista de strings para armazenar dados do tipo composto.
+1. `insert_filter(string data)`: Insere um dado na lista correspondente ao seu tipo (número, texto ou composto).
+2. `remove(string data)`: Remove um dado da lista correspondente ao seu tipo.
+3. `search(string data)`: Verifica se um dado está presente nas listas e imprime uma mensagem se encontrado.
+4. `get(string data)`: Retorna o dado se estiver presente nas listas, caso contrário, retorna `null`.
+5. `print()`: Imprime os dados armazenados, separados por tipo.
+6. `save()`: Salva os dados em um arquivo no diretório atual.
+7. `Getdatatext()`, `Getdatanumber()`, `Getdatacompound()`: Métodos para obter as listas de dados de texto, números e compostos, respectivamente.
 
+### Classe `CheckType`:
+Esta classe verifica o tipo de dado (número, texto ou composto) por meio de expressões regulares.
 
-Métodos:
+#### Métodos:
+1. `CheckTypeFunction(string data)`: Retorna um código indicando o tipo do dado.
 
-insert_filter(string data): Insere dados na classe, identificando automaticamente o tipo de dado e armazenando na lista apropriada.
+### Classe `Analyze`:
+Esta classe realiza análises estatísticas sobre os dados armazenados na classe `Store`.
 
-remove(string data): Remove dados da classe com base no tipo de dado.
+#### Atributos:
+- `datatextcopy`: Lista de strings contendo cópia dos dados de texto da classe `Store`.
+- `datanumbercopy`: Lista de strings contendo cópia dos dados de números da classe `Store`.
+- `datacompoundcopy`: Lista de strings contendo cópia dos dados compostos da classe `Store`.
 
-search(string data): Realiza uma busca na classe, identificando automaticamente o tipo de dado e informando se o dado foi encontrado.
+#### Métodos:
 
-get(string data): Retorna o dado da classe se encontrado, caso contrário, retorna nulo.
+1. `media()`: Calcula a média dos dados numéricos.
+2. `variance()`: Calcula a variância dos dados numéricos.
+3. `standardDeviation()`: Calcula o desvio padrão dos dados numéricos.
+4. `frequency(string datatext)`: Conta a frequência de um dado texto nas listas, considerando o tipo de dado.
 
-print(): Exibe os dados armazenados na classe, separados por tipo.
+### Classe `Program`:
+O método `Main` contém testes das classes `Store` e `Analyze`, onde dados são inseridos na loja (`Store`), impressos, salvos em arquivo, buscados e, em seguida, análises estatísticas são realizadas com a classe `Analyze`.
 
-Outros Métodos:
-
-save(string data): Método vazio (ainda não implementado).
-
-Getdatatext(), Getdatanumber(), Getdatacompound(): Métodos para obter as listas de dados de texto, números e dados compostos, respectivamente.
-
-CheckType Class
-
-CheckTypeFunction(string data): Função que verifica o tipo de dado (número, texto ou composto) e retorna um código correspondente.
-
-Analyze Class
-
-
-Atributos :
-
-datatextcopy: Lista de strings para armazenar cópia dos dados de texto.
-datanumbercopy: Lista de strings para armazenar cópia dos dados numéricos.
-datacompoundcopy: Lista de strings para armazenar cópia dos dados compostos.
-
-
-Métodos:
-
-media(): Calcula e retorna a média dos dados numéricos armazenados.
-standardDeviation(): Método vazio (ainda não implementado) para calcular o desvio padrão dos dados numéricos.
-frequency(): Método vazio (ainda não implementado) para calcular a frequência dos dados numéricos.
-
-
-Program Class
-
-Main(): Função principal que realiza testes utilizando as classes Store e Analyze. Insere dados na Store, imprime os dados e realiza a análise da média utilizando a classe Analyze.
+Em resumo, o algoritmo fornece uma estrutura para armazenar, manipular e analisar diferentes tipos de dados, organizando as funcionalidades em classes específicas para facilitar a compreensão e manutenção do código.
