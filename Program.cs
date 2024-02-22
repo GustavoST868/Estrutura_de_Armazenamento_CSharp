@@ -8,7 +8,7 @@ using System.IO;
 
 
 
-
+//class to store the data
 class Store
 {
     // Attributes
@@ -18,6 +18,7 @@ class Store
 
     public Store() { }
 
+    //method for entering data
     public void insert_filter(string data)
     {
         CheckType ct = new CheckType();
@@ -39,6 +40,7 @@ class Store
         }
     }
 
+    //method to remove data
     public void remove(string data)
     {
         CheckType ct = new CheckType();
@@ -60,6 +62,7 @@ class Store
         }
     }
 
+    //method for searching data
     public void search(string data)
     {
         CheckType ct = new CheckType();
@@ -91,6 +94,7 @@ class Store
     }
 
 
+    //method to obtain data
     public string get(string data)
     {
         if (datanumber.Contains(data) || datatext.Contains(data) || datacompound.Contains(data))
@@ -103,6 +107,7 @@ class Store
         }
     }
 
+    //method to show data
     public void print()
     {
         Console.WriteLine("\nDataNumber:");
@@ -124,6 +129,7 @@ class Store
         }
     }
 
+    //method to save data
     public void save( )
     {
         StringBuilder string_data = new StringBuilder();
@@ -165,26 +171,32 @@ class Store
         
     }
 
+    //get text list
     public List<string> Getdatatext()
     {
         return datatext;
     }
 
+    //get number list
     public List<string> Getdatanumber()
     {
         return datanumber;
     }
 
+    //get list of composite data
     public List<string> Getdatacompound()
     {
         return datacompound;
     }
 }
 
+
+//class to check data type
 class CheckType
 {
     public CheckType() { }
 
+    //check data
     public int CheckTypeFunction(string data)
     {
         // number
@@ -205,6 +217,7 @@ class CheckType
     }
 }
 
+//class to extract statistical data
 class Analyze
 {
     // Attributes
@@ -223,6 +236,7 @@ class Analyze
         datanumbercopy = datanumber;
     }
 
+    //get media
     public double media()
 
     {
@@ -251,6 +265,7 @@ class Analyze
         return media;
     }
 
+    //get variance
     public double variance()
     {
 
@@ -283,12 +298,14 @@ class Analyze
         return variance;
     }
 
+    //get standard deviation
     public double standardDeviation()
     {
         return Math.Sqrt(variance());
     }
 
 
+    //get frequency
     public int frequency(string datatext)
     {
         int contador = 0;
@@ -337,6 +354,7 @@ class Analyze
     }
 }
 
+//main class program
 class Program
 {
     static void Main()
